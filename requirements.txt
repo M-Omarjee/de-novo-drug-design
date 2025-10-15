@@ -1,0 +1,5 @@
+numpy
+pandas
+tqdm       # For progress bars during training
+matplotlib
+seaborn
