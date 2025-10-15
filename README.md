@@ -24,6 +24,11 @@ conda create -n molgen python=3.10
 # 2. Activate the new environment
 conda activate molgen
 ```
+2. Install Core Dependencies (PyTorch and RDKit)
+
+These packages require specific installation channels to resolve complex dependencies on Apple Silicon architecture.
+
+```bash
 # Install PyTorch (Official PyTorch channel for the CPU version)
 conda install pytorch -c pytorch
 
@@ -32,8 +37,13 @@ conda install -c conda-forge rdkit
 
 # Fix NumPy Compatibility Issue
 pip install "numpy<2"
+```
+3. Install Project Requirements
 
+Install the remaining utility libraries from the requirements.txt file:
+```bash
 pip install -r requirements.txt
+```
 
 ## 🏃 Project Execution
 Ensure your Conda environment is active ((molgen) is visible in your terminal prompt) and you are in the project's root directory.
