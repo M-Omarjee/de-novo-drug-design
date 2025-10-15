@@ -92,4 +92,6 @@ The virtual screening process identified a specific molecule with an optimal Log
 
 This image is a screenshot of the molecule's calculated 3D structure, viewed in a web component after rendering the coordinates. Its three-dimensional shape is crucial for predicting how it would interact with a biological target.
 
-<img src="renders/3D Render Mol File Screenshot.png" alt="3D Render of the Novel Candidate Molecule" width="600" />
+<div align="center">
+<img src="renders/3D Render Mol File Screenshot.png" alt="3D Render of the Novel Candidate Molecule" width="450" />
+</div>
