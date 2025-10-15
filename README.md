@@ -79,3 +79,17 @@ The model was trained for the full 20 epochs, achieving a minimum loss of 0.4886
 | **3. Novelty Rate** | **65.36%** | Percentage of the valid molecules that were brand new (not present in the original 16,087 molecule training set). |
 
 Conclusion: The model successfully invented 600 novel, unique, and valid chemical structures, demonstrating a strong capability for de novo molecular design.
+
+## 🏆 Final Candidate Selection and 3D Visualization
+The virtual screening process identified a specific molecule with an optimal LogP score of 2.08 (target ideal is 2.0), which is critical for excellent oral bioavailability. This molecule represents the most promising candidate from the AI's generation.
+
+| Property | Value |
+| :-- | :-- |
+| SMILES String | CCCCCNC(=O)COC(=O)c1ccccc1OC(C)=O |
+| LogP Score | 2.08 (near-ideal for drug absorption) |
+
+### 3D Render from Online Viewer
+
+This image is a screenshot of the molecule's calculated 3D structure, viewed in a web component after rendering the coordinates. Its three-dimensional shape is crucial for predicting how it would interact with a biological target.
+
+![3D Render of the Novel Candidate Molecule](renders/3D Render Mol File Screenshot.png)
