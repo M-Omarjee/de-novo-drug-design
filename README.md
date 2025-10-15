@@ -67,3 +67,14 @@ Run the generation script as a module:
 python -m src.generate
 ```
 The output will provide key metrics: Validity Rate, Uniqueness Rate, and Novelty Rate, demonstrating the generative capability of the model.
+
+## 📈 Final Generation Results
+The model was trained for the full 20 epochs, achieving a minimum loss of 0.4886. The final generation script demonstrated high quality, diversity, and novelty in the output.
+
+Metric	Result	Description
+Attempted to generate	1,000	Total number of novel molecules the AI attempted to write.
+1. Validity Rate	91.80%	Percentage of generated SMILES that are chemically plausible structures (passed RDKit check).
+2. Uniqueness Rate	89.20%	Percentage of the generated molecules that were unique (not duplicates).
+3. Novelty Rate	65.36%	Percentage of the valid molecules that were brand new (not present in the original 16,087 molecule training set).
+
+Conclusion: The model successfully invented 600 novel, unique, and valid chemical structures, demonstrating a strong capability for de novo molecular design.
