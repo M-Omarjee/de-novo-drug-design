@@ -24,7 +24,7 @@ conda create -n molgen python=3.10
 # 2. Activate the new environment
 conda activate molgen
 ```
-2. Install Core Dependencies (PyTorch and RDKit)
+### 2. Install Core Dependencies (PyTorch and RDKit)
 
 These packages require specific installation channels to resolve complex dependencies on Apple Silicon architecture.
 
@@ -38,7 +38,7 @@ conda install -c conda-forge rdkit
 # Fix NumPy Compatibility Issue
 pip install "numpy<2"
 ```
-3. Install Project Requirements
+### 3. Install Project Requirements
 
 Install the remaining utility libraries from the requirements.txt file:
 ```bash
@@ -48,7 +48,7 @@ pip install -r requirements.txt
 ## 🏃 Project Execution
 Ensure your Conda environment is active ((molgen) is visible in your terminal prompt) and you are in the project's root directory.
 
-# 1. Train the Model
+### 1. Train the Model
 
 The training script reads the data/SMILES_Big_Data_Set.csv file, processes it, and trains the GRU model for 20 epochs. It saves the best model checkpoint to models/best_smiles_generator.pt.
 
@@ -58,7 +58,7 @@ python -m src.train
 ```
 Note: Training on a CPU is time-intensive (estimated 3-7 hours). You can stop the training early with Ctrl+C after a few epochs, and a valid checkpoint will likely be saved.
 
-# 2. Generate and Evaluate Novel Molecules
+### 2. Generate and Evaluate Novel Molecules
 
 Once training is complete, the src.generate script loads the best model checkpoint, generates 1,000 new SMILES strings, validates them using RDKit, and checks for novelty against the original dataset.
 
@@ -71,10 +71,11 @@ The output will provide key metrics: Validity Rate, Uniqueness Rate, and Novelty
 ## 📈 Final Generation Results
 The model was trained for the full 20 epochs, achieving a minimum loss of 0.4886. The final generation script demonstrated high quality, diversity, and novelty in the output.
 
-Metric	Result	Description
-Attempted to generate	1,000	Total number of novel molecules the AI attempted to write.
-1. Validity Rate	91.80%	Percentage of generated SMILES that are chemically plausible structures (passed RDKit check).
-2. Uniqueness Rate	89.20%	Percentage of the generated molecules that were unique (not duplicates).
-3. Novelty Rate	65.36%	Percentage of the valid molecules that were brand new (not present in the original 16,087 molecule training set).
+| Metric | Result | Description |
+| :--- | :--- | :--- |
+| **Attempted to generate** | 1,000 | Total number of novel molecules the AI attempted to write. |
+| **1. Validity Rate** | **91.80%** | Percentage of generated SMILES that are chemically plausible structures (passed RDKit check). |
+| **2. Uniqueness Rate** | **89.20%** | Percentage of the generated molecules that were unique (not duplicates). |
+| **3. Novelty Rate** | **65.36%** | Percentage of the valid molecules that were brand new (not present in the original 16,087 molecule training set). |
 
 Conclusion: The model successfully invented 600 novel, unique, and valid chemical structures, demonstrating a strong capability for de novo molecular design.
