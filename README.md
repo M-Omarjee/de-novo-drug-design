@@ -97,5 +97,5 @@ This image is a screenshot of the molecule's calculated 3D structure, viewed in 
 </div>
 
 <div align="center">
-Special thanks are extended to the [**Kaggle dataset**](https://www.kaggle.com/datasets/yanmaksi/big-molecules-smiles-dataset) for the training data and to the [**MolViewer**](https://molstar.org/viewer/) for the clear 3D visualization.
+Special thanks are extended to the [Kaggle dataset](https://www.kaggle.com/datasets/yanmaksi/big-molecules-smiles-dataset) for the training data and to the [MolViewer](https://molstar.org/viewer/) for the clear 3D visualization.
 </div>
