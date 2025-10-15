@@ -94,8 +94,7 @@ This image is a screenshot of the molecule's calculated 3D structure, viewed in 
 
 <div align="center">
 <img src="renders/3D Render Mol File Screenshot.png" alt="3D Render of the Novel Candidate Molecule" width="450" />
-</div>
 
-<div align="center">
+
 Special thanks are extended to the [Kaggle dataset](https://www.kaggle.com/datasets/yanmaksi/big-molecules-smiles-dataset) for the training data and to the [MolViewer](https://molstar.org/viewer/) for the clear 3D visualization.
 </div>
