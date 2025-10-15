@@ -1,6 +1,6 @@
 import torch
 from rdkit import Chem
-from rdkit.Chem.rdMolDescriptors import CalcMolLogP
+from rdkit.Chem import MolFromSmiles, MolToSmiles, Descriptors
 from src.data_processing import load_and_prepare_data, Vocabulary, SOS_TOKEN, EOS_TOKEN
 from src.model import SmilesGenerator
 import numpy as np
@@ -75,7 +75,7 @@ def validate_and_score(smiles, valid_smiles_set):
     is_novel = smiles not in valid_smiles_set
     
     # Calculate a simple property (LogP for drug-likeness)
-    logp = CalcMolLogP(mol)
+    logp = Descriptors.MolLogP(mol)
     
     return is_valid, is_novel, logp
 
