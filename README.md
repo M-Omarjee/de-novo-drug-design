@@ -1,4 +1,4 @@
-# De Novo Drug Design using a Recurrent Neural Network (RNN)
+# 💊 De Novo Drug Design using a Recurrent Neural Network (RNN)
 
 This project implements a Recurrent Neural Network (RNN), specifically a GRU, to generate novel small molecules in the form of SMILES strings. It is a proof-of-concept for generative chemistry, inspired by the objective of finding new molecules with desired properties.
 
